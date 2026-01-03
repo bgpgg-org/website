@@ -1,0 +1,6 @@
+baseURL = 'https://bgpgg.org/'
+languageCode = 'en-us'
+title = 'bgpgg'
+
+[params]
+  description = 'Fast and observable BGP'

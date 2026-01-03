@@ -1,0 +1,8 @@
+// Main entry point for SCSS
+// Import order matters - variables first, then reset, then components
+
+@import 'variables';
+@import 'reset';
+@import 'layout';
+@import 'shared';
+@import 'header';

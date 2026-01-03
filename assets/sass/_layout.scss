@@ -1,0 +1,26 @@
+@import 'variables';
+
+// Container classes
+.container {
+  width: 100%;
+  max-width: $container-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.container-wide {
+  width: 100%;
+  max-width: $container-wide-max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
+
+.container-fluid {
+  width: 100%;
+  padding-left: $container-padding;
+  padding-right: $container-padding;
+}
