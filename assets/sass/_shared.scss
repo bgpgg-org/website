@@ -5,6 +5,10 @@ body {
   color: $black;
 }
 
+p {
+  line-height: 1.6;
+}
+
 // Links
 a {
   color: $link;
@@ -16,22 +20,69 @@ a {
 
 // Main content area
 main {
-  padding: $spacing-lg 0;
+  padding: $spacing-md 0;
 }
 
-// Hero section
-.hero {
-  text-align: center;
-  padding: $spacing-xl 0;
+// News section
+.news {
+  max-width: 800px;
 
-  h1 {
-    font-size: 3rem;
-    margin-bottom: $spacing-md;
+  h2 {
+    font-size: 1.5rem;
   }
 
-  p {
-    font-size: 1.25rem;
+  .news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 $spacing-md 0;
+  }
+
+  .news-item {
+    margin-bottom: $spacing-xs;
+  }
+
+  .news-date {
     color: $gray-dark;
+  }
+}
+
+// News article page
+.news-article {
+  header {
+    margin-bottom: $spacing-sm;
+
+    .news-date {
+      font-size: 0.9rem;
+      color: $gray-dark;
+      display: block;
+      margin-bottom: $spacing-sm;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+  }
+
+  .news-content {
+    margin-bottom: $spacing-lg;
+
+    p {
+      margin-bottom: $spacing-md;
+    }
+  }
+
+  .news-nav {
+    padding-top: $spacing-md;
+    border-top: 1px solid $gray;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 }
 

@@ -1,8 +1,24 @@
 {{ define "main" }}
-<div class="hero">
-  <div class="container">
-    <h1>bgpgg</h1>
-    <p>Fast and observable BGP, implemented in Rust</p>
-  </div>
+<div class="container">
+  <section class="about">
+    <p>
+      bgpgg is a fast and observable BGP implementation written in Rust.
+      Its goal is to provide modern routing capabilities with built-in observability features,
+      leveraging Rust's performance and safety guarantees for production-grade networking infrastructure.
+    </p>
+  </section>
+
+  {{ $newsPosts := where .Site.RegularPages "Type" "news" }}
+  {{ $newsPosts = $newsPosts | first 5 }}
+  {{ if $newsPosts }}
+  <section class="news">
+    <h2>Latest News</h2>
+    <ul class="news-list">
+      {{ range $newsPosts }}
+        {{ partial "news-item.html" . }}
+      {{ end }}
+    </ul>
+  </section>
+  {{ end }}
 </div>
 {{ end }}
