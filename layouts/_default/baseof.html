@@ -8,7 +8,7 @@
   <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | relURL }}">
 
-  {{ $style := resources.Get "sass/index.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+  {{ $style := resources.Get "sass/index.scss" | css.Sass | resources.Minify | resources.Fingerprint }}
   <link rel="stylesheet" href="{{ $style.Permalink | relURL }}">
 </head>
 <body>
