@@ -1,0 +1,15 @@
+<aside class="docs-sidebar">
+  <nav class="docs-nav">
+    <ul class="docs-menu">
+      {{ $currentPage := . }}
+      {{ $section := .CurrentSection }}
+      {{ range $section.Pages.ByWeight }}
+      <li>
+        <a href="{{ .RelPermalink }}" class="{{ if eq $currentPage.RelPermalink .RelPermalink }}active{{ end }}">
+          {{ .Title }}
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
+</aside>

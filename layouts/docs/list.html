@@ -1,0 +1,22 @@
+{{ define "main" }}
+<div class="docs-container">
+  <div class="breadcrumbs-mobile">
+    {{ partial "breadcrumbs.html" . }}
+  </div>
+  <div class="docs-layout">
+    {{ partial "docs-sidebar.html" . }}
+    <div class="docs-content">
+      <article>
+        {{ .Content }}
+        {{ if .Pages }}
+        <ul>
+        {{ range .Pages }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+        {{ end }}
+        </ul>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+</div>
+{{ end }}
