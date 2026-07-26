@@ -7,7 +7,14 @@ weight = 2
 
 ### Pre-built Binaries
 
-Download the platform binary from https://github.com/roggnetwork/bgpgg/releases. Each release ships two binaries:
+Download the [latest release](https://github.com/roggnetwork/rogg/releases/latest) for your platform:
+
+```bash
+curl -LO https://github.com/roggnetwork/rogg/releases/download/<version>/rogg-<version>-x86_64-linux.tar.gz
+tar xzf rogg-<version>-x86_64-linux.tar.gz
+```
+
+Each release ships two binaries:
 
 - `bgpggd` - the BGP daemon
 - `ggsh` - the gg shell, used to manage `bgpggd`
@@ -17,8 +24,8 @@ Download the platform binary from https://github.com/roggnetwork/bgpgg/releases.
 Requires Rust.
 
 ```bash
-git clone https://github.com/roggnetwork/bgpgg.git
-cd bgpgg
+git clone https://github.com/roggnetwork/rogg.git
+cd rogg
 make
 ```
 
@@ -90,4 +97,4 @@ docker exec bgpggd ggsh show bgp summary
 docker exec bgpggd ggsh show bgp routes
 ```
 
-For a multi-speaker example, see [`docker/docker-compose.yml`](https://github.com/roggnetwork/bgpgg/blob/master/docker/docker-compose.yml).
+For a multi-speaker example, see [`bgpgg/docker/docker-compose.yml`](https://github.com/roggnetwork/rogg/blob/master/bgpgg/docker/docker-compose.yml).
