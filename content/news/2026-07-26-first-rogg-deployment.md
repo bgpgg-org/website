@@ -5,4 +5,4 @@ slug = 'first-rogg-deployment'
 draft = false
 +++
 
-rogg now runs a live network on <a href="https://dn42.dev/" target="_blank" rel="noopener">dn42</a>, the decentralized peer-to-peer network. It powers AS4242423930, which originates /27 IPv4 and /48 IPv6 blocks from two points of presence. Both POPs run on AWS, connected by iBGP. SEA1 holds an eBGP session with an upstream carrying the full dn42 table (~2,300 routes). bgpgg streams per-peer session state, RIB sizes, and process memory to Prometheus and CloudWatch metrics through emf logs.
+rogg now runs a live network on <a href="https://dn42.dev/" target="_blank" rel="noopener">dn42</a>, a decentralized peer-to-peer network. It operates AS4242423930, originating a /27 IPv4 and /48 IPv6 block from two points of presence. Both POPs run on AWS and are linked by iBGP; one of them also holds an eBGP session with an upstream that carries the full dn42 table (~2,300 routes). bgpgg exports per-peer session state, RIB sizes, and process memory as Prometheus metrics and CloudWatch EMF logs.
