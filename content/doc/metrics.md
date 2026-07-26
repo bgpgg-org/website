@@ -70,6 +70,11 @@ Emitted once per occurrence, at the event site.
 | `SessionEstablishedCount` | 1 | Count | Peer | |
 | `SessionDownCount` | 1 | Count | Peer | Reason |
 | `ConnectRetryCount` | 1 | Count | Peer | |
+| `TcpConnectionCount` | 1 | Count | Peer, Direction | |
+| `CollisionDetectedCount` | 1 | Count | Peer | |
+| `CollisionDialedWinsCount` | 1 | Count | Peer | |
+| `CollisionAcceptedWinsCount` | 1 | Count | Peer | |
+| `CollisionCandidateDroppedCount` | 1 | Count | Peer | |
 | `HoldTimerExpiredCount` | 1 | Count | Peer | |
 | `NotificationReceivedCount` | 1 | Count | Peer, Code | Subcode |
 | `NotificationSentCount` | 1 | Count | Peer, Code | Subcode |

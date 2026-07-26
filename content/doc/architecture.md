@@ -65,6 +65,7 @@ Server spawns peer tasks via `spawn_peer()`. Each peer runs as a long-lived task
 - **RFC 4456** - BGP Route Reflection
 - **RFC 4724** - Graceful Restart Mechanism for BGP
 - **RFC 4760** - Multiprotocol Extensions for BGP-4
+- **RFC 6286** - Autonomous-System-Wide Unique BGP Identifier for BGP-4
 - **RFC 6793** - BGP Support for Four-Octet Autonomous System (AS) Number Space
 - **RFC 7606** - Revised Error Handling for BGP UPDATE Messages
 - **RFC 7854** - BGP Monitoring Protocol (BMP)
