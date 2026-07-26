@@ -1,6 +1,6 @@
 +++
 title = 'ggsh Reference'
-weight = 5
+weight = 6
 +++
 
 `ggsh` is the gg shell — an interactive tool for inspecting and reconfiguring a running `bgpggd`. It speaks gRPC to the daemon and also reads and writes `rogg.conf` directly when committing changes.
@@ -139,7 +139,14 @@ rpki-cache <host:port> refresh-interval <seconds>
 rpki-cache <host:port> expire-interval <seconds>
 
 bgp-ls instance-id <u64>
+
+telemetry json                                 # JSON sink (mutually exclusive with cloudwatch-emf)
+telemetry cloudwatch-emf namespace <namespace> # CloudWatch EMF sink
+telemetry prometheus                           # Prometheus endpoint, default 127.0.0.1:9273
+telemetry prometheus listen <host:port>        # Prometheus endpoint, explicit address
 ```
+
+See [Metrics](/doc/metrics/) for the sink formats and metric reference.
 
 ### Removing State
 
@@ -157,6 +164,7 @@ unset prefix-list <name> <prefix>     # Remove one entry
 unset bmp-server <addr>
 unset rpki-cache <addr>
 unset bgp-ls
+unset telemetry                       # Remove all telemetry sinks
 ```
 
 ### Inspection

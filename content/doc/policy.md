@@ -1,6 +1,6 @@
 +++
 title = 'Policy'
-weight = 4
+weight = 5
 +++
 
 Policies decide which routes are accepted from a peer and which are advertised back. They live inside `service bgp { ... }` and reference reusable defined-sets (prefix lists, neighbor sets, AS-path patterns, communities).

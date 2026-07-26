@@ -187,6 +187,27 @@ bgp-ls {
 }
 ```
 
+## Telemetry
+
+Emit operational metrics to a sink. `json` and `cloudwatch-emf` are push sinks
+and mutually exclusive; `prometheus` is a pull endpoint and can run alongside
+either:
+
+```
+telemetry {
+  cloudwatch-emf {
+    namespace Rogg/Bgpgg
+  }
+  prometheus {
+    listen 127.0.0.1:9273
+  }
+}
+```
+
+Use `telemetry { json {} }` for plain JSON lines, or `prometheus {}` to default
+the listener to `127.0.0.1:9273`. See [Metrics](/doc/metrics/) for the sink
+formats and the full metric reference.
+
 ## Policy and Sets
 
 See [Policy](/doc/policy/) for `policy`, `prefix-list`, `neighbor-set`, `as-path-set`, `community-set`, `ext-community-set`, and `large-community-set` blocks.
@@ -229,6 +250,15 @@ service bgp {
 
   bmp-server 127.0.0.1:11019 {
     statistics-timeout 60
+  }
+
+  telemetry {
+    cloudwatch-emf {
+      namespace Rogg/Bgpgg
+    }
+    prometheus {
+      listen 127.0.0.1:9273
+    }
   }
 
   prefix-list customer-prefixes {
